@@ -1,0 +1,48 @@
+.popup {
+    width: auto; 
+    height: 500px;
+    background-color: #f4d800;
+    border-radius: 105px;
+    box-shadow: 0 150px 150px rgb(215, 243, 5);
+    padding: 2000px;
+  }
+  
+  .upload-section {
+    background-color: aquamarine;
+    text-align: center;
+    margin-bottom: 200px;
+  }
+  
+  .result-section {
+    table {
+      border: 1px solid black;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 100px;
+      border: 1px solid #060202e3;
+    }
+    .result {
+      border: 3cm ;
+      border-color: #3e0fe9;
+      color: green; /* for malicious */
+    }
+  }
+  
+  .progress-bar { 
+    height: 5px;
+    background-color: #3e0fe9;
+    overflow: visible;
+  }
+  
+  .progress-bar > div { 
+    height: 100%;
+    background-color: teal; 
+    animation: progress-bar-fill 2s ease-in-out forwards;
+  }
+  
+  @keyframes progress-bar-fill {
+    from { width: 100%; }
+    to { width: 100%; }
+  }

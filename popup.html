@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virus Scan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .upload-section, .result-section {
+      background-color: #fff;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+      max-height: 1000px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 10px;
+      height: 20px;
+    }
+
+    .progress-bar::before {
+      content: '';
+      display: block;
+      width: 40%; 
+      height: 100%;
+      background-color: #4caf50;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .popup.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup"></div>
+
+  <div class="upload-section">
+    <h2>Virus Scan</h2>
+    <div class="progress-bar"></div>
+  </div>
+
+  <div class="result-section">
+    <h2><i>Virus Scan Results</i></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>FileName</th>
+          <th>ScanEngine</th>
+          <th>Result</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example row -->
+        <tr>
+          <td>example-file.exe</td>
+          <td>Engine1</td>
+          <td>Clean</td>
+          <td>Details...</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

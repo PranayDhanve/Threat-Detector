@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "SAFE N FINE",
+  "version": "1.0",
+  "description": "Tracks and manages download requests, and provides real-time download information within the extension.",
+  "permissions": [
+    "downloads",
+    "storage",
+    "notifications",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "folder.png",
+      "48": "folder.png",
+      "128": "folder.png"
+    },
+    "default_title": "SAFE N FINE"
+  },
+  "icons": {
+    "16": "folder.png",
+    "48": "folder.png",
+    "128": "folder.png"
+  },
+  "commands": {
+    "open-downloads": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Opens the download manager popup"
+    }
+  },
+  "options_page": "options.html",
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+  
+}
